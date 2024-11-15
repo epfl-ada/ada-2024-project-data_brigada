@@ -9,7 +9,8 @@ def count_tropes(tv_tropes):
     tropes_count =tv_tropes['Character trope'].value_counts()
     # Convert the Series to a DataFrame
     tropes_count = pd.DataFrame(tropes_count)
-    return tropes_count
+    
+    return tropes_count.to_string(index=True)
 
 
 def tropes_count_histogram(tropes_count):
@@ -30,8 +31,8 @@ def tropes_count_histogram(tropes_count):
     plt.tight_layout()
     plt.show()
 
-def tropes_by_year(tv_tropes, character_metadata):
-    """Plot the distribution of character tropes over the years for each decade."""
+def tropes_by_decade(tv_tropes, character_metadata):
+    """Get the character tropes per decade"""
     
     # Generate a dataframe with the character trope and the movie release year
     tropes_by_year = pd.DataFrame(tv_tropes['Character trope'])
@@ -52,10 +53,13 @@ def tropes_by_year(tv_tropes, character_metadata):
     
     # Divide by decade
     tropes_by_year['Decade'] = (tropes_by_year['Movie release year'] // 10) * 10
+    
+    return tropes_by_year
 
+def tropes_by_decade_histogram(tropes_by_year):
+    """Plot the distribution of character tropes over the years for each decade."""
     decade_trope_counts = tropes_by_year.groupby(['Decade', 'Character trope']).size().unstack(fill_value=0)
-
-    # Plot a histogram per decade
+    
     for decade in decade_trope_counts.index:
         trope_counts = decade_trope_counts.loc[decade][decade_trope_counts.loc[decade] > 0].sort_values(ascending=False) 
         
@@ -101,6 +105,27 @@ def tropes_by_gender(tv_tropes, character_metadata):
 
     plt.show()
 
+def tropes_by_gender_count(tv_tropes, character_metadata):
+    """Count the number of occurrences of each gender"""
+    # Generate a dataframe with the character trope and the gender of the actor
+    tropes_by_gender = pd.DataFrame(tv_tropes['Character trope'])
+    actors_gender = []
+    for movie_info in tv_tropes['Movie information']:
+        movie_info = ast.literal_eval(movie_info)
+        character_id = movie_info['id']
+        if character_metadata[character_metadata['Freebase character/actor map ID'] == character_id].empty:
+            gender = None
+        else:
+            gender = character_metadata[character_metadata['Freebase character/actor map ID'] == character_id]['Actor gender'].values[0]
+        actors_gender.append(gender)
+        
+    tropes_by_gender.insert(1, "Actor gender", actors_gender)
+    
+    gender_counts = tropes_by_gender['Actor gender'].value_counts()
+    gender_counts = gender_counts.rename_axis('Gender').reset_index(name='Count')
+    
+    return gender_counts
+
 def tropes_by_genre(tv_tropes, movie_metadata):
     """Plot the top 5 Character Tropes for the top 10 genres"""
     # Get the movie genre for each recorded character 
@@ -142,7 +167,7 @@ def tropes_by_genre(tv_tropes, movie_metadata):
     # Plotting all genres in subplots
     unique_genres = top_10_tropes_per_genre['Movie genres'].unique()
     num_genres = len(unique_genres)
-    cols = 3  # Number of columns in the subplot grid
+    cols = 4  # Number of columns in the subplot grid
     rows = (num_genres + cols - 1) // cols  # Calculate rows needed
 
     fig, axes = plt.subplots(rows, cols, figsize=(15, rows * 5), constrained_layout=True)
@@ -166,5 +191,5 @@ def tropes_by_genre(tv_tropes, movie_metadata):
         fig.delaxes(axes[j])
 
     # Show the plot
-    plt.suptitle('Top 5 Character Tropes by Genre', fontsize=16)
+    plt.suptitle('Top 5 Character Tropes by Genre', fontsize=14)
     plt.show()
