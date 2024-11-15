@@ -15,6 +15,8 @@ This project aims to define movie character archetypes based on the CMU Movie da
 5. Do character archetypes affect the movie's success differently depending on the genre ?
 
 ## Methods
+We used NLP techniques to analyse the character tropes, in order to define the character archetype between female and male. In the future, NLP will be used to process the plot summaries in order to extract the key features and cluster similar plots into groups.
+
 
 ### Data Preprocessing
 Preprocessing normalizes movie information and character information so that trends in heroic and villainous portrayal, together with actor roles, can be analyzed over time. Revenue figures were adjusted for inflation to put them on a comparable footing to enable meaningful comparisons of commercial success across years. Other fields, like languages, countries, and genres, were brought into formats easily manipulable. Ethnicity data was mostly missing or in an unusable form using Freebase ID format and thus was supplemented to allow demographic analysis.
@@ -27,6 +29,14 @@ The `tv tropes` dataset is not large enough for us to do a proper significant an
 
 ## Additional datasets
 
-## Timeline
+## Timeline and organisation
 
-## Team organization 
+In the next steps, we will answer the questions: What character archetypes make a movie successful ? Do character archetypes affect a movie’s success depending on the film genre ?
+
+Week 1: Answer all research questions
+Week 2: Homework 2
+Week 3: Create the datastory based on our research
+Week 4: Design the webpage and do the vizualisation
+Week 5: Clean the respository, report
+
+Every team member will continue to work on his part in order to answer the problematic.
