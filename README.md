@@ -25,7 +25,18 @@ First of all, for a better understanding of the data, it needs to be visualized.
 ### Word Embeddings
 The `tv tropes` dataset is not large enough for us to do a proper significant analysis with it. To enlarge the dataset, the idea (that would be implemented in Milestone 3) is to use an embedding model (for example Word2Vec or BERT) to encode the plot summaries and the character tropes and compute the cosine similarity between the two. We would choose a similarity threshold and take the most similar embeddings to find tropes in the movie summaries and enlarge the trope counts. 
 
+### Successful movies
+To define a "successful" movie, we analyzed both IMDb ratings and box office revenue. First, we identified the top 5% of movies based on box office revenue, filtering out films released before 1960 to ensure relevance to contemporary trends. We then explored whether high revenue correlated with high ratings by calculating their correlation and visualizing this relationship with scatter plots, including log transformations and heatmaps. Distribution histograms for both metrics revealed that while ratings were normally distributed, revenue was heavily oriented, with only a few blockbusters achieving exceptionally high earnings. Additionally, we examined genres and actor involvement, observing the highest earning genres and identifying top actors by their frequency in the most successful films and their associated revenue averages. This approach helped us understand the factors contributing to both financial and critical success in cinema.
+
+
 ## Additional datasets
+To better understand how character archetypes affect movie success, we are using data from IMDb, which includes ratings, votes, genres, and other details. This extra dataset allows us to see how character traits and types relate to success, measured by box office revenue and IMDb ratings. We are using three main files from IMDb:
+
+title.ratings.tsv.gz which provides ratings and vote counts, which help us measure movie success. By combining this with character or movie data, we can see if certain character/movie types tend to get higher ratings or more votes.
+title.akas.tsv.gz which contains alternative titles in different regions and languages. We use it to look at regional preferences, seeing if certain character types are more popular in certain areas.
+title.basics.tsv.gz which gives basic info like genre and release year, which lets us study how character types and success metrics have changed over time and across genres.
+
+The IMDb data helps us answer our research questions and IMDb ratings and votes allow us to define and measure success as we can look at which movies and characters types, genders, and ages are linked to higher ratings and popularity.
 
 ## Timeline
 
