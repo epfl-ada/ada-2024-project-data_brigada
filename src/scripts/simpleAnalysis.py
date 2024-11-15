@@ -1,6 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Load movie metadata
+movies = pd.read_csv("../../data/clean/movie_metadata_cleaned.csv")
+
+# Load character metadata
+characters = pd.read_csv("../../data/clean/character_metadata_cleaned.csv")
+
 def gender_distribution(characters, movies):
     """Plot the gender distribution in films over time."""
     # Filter for movies after 1960 and valid gender entries
