@@ -15,7 +15,7 @@ This project aims to define movie character archetypes based on the CMU Movie da
 5. Do character archetypes affect the movie's success differently depending on the genre ?
 
 ## Methods
-We used NLP techniques to analyse the character tropes, in order to define the character archetype between female and male. In the future, NLP will be used to process the plot summaries in order to extract the key features and cluster similar plots into groups.
+We used NLP techniques to analyse the character tropes, in order to define the character archetype between female and male. In the futur, NLP will be used to process the plot summaries in order to extract the key features and cluster similar plots into groups.
 
 
 ### Data Preprocessing
