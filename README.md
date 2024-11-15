@@ -43,7 +43,7 @@ The IMDb data helps us answer our research questions and IMDb ratings and votes 
 
 ## Timeline and organisation
 
-In the next steps, we will answer the questions: What character archetypes make a movie successful ? Do character archetypes affect a movie’s success depending on the film genre ?
+In the next steps, we will answer the questions: What is considered a “hero” profile and a “villain” profile ? What character archetypes make a movie successful ? 
 
 Week 1: Answer all research questions
 Week 2: Homework 2
@@ -51,4 +51,4 @@ Week 3: Create the datastory based on our research
 Week 4: Design the webpage and do the vizualisation
 Week 5: Clean the respository, report
 
-Every team member will continue to work on his part in order to answer the problematic.
+Every team member will continue to work on his part (subquestion) in order to answer the problematic.

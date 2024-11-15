@@ -3,6 +3,7 @@ import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import ast
 
 
 # Define the paths
@@ -219,3 +220,36 @@ def plot_trends_over_time(merged_df):
     plt.ylabel('Average IMDb Rating')
     plt.show()
 
+def top50_movies_by_decade(movies):
+    """Displays the top 50 movies by box office revenue for each decade."""
+
+    return movies.groupby("Decade").apply(lambda x: x.nlargest(50, "Box office revenue")[["Wikipedia movie ID", "Genres", "Decade"]]).reset_index(drop=True)
+
+def top5_genres_by_decade(top10_movies_by_decade):
+    """Displays the top 5 genres by average box office revenue for each decade."""
+    # each genre has its own row
+    top10_movies_by_decade["Genres"] = top10_movies_by_decade["Genres"].apply(ast.literal_eval)
+    genres_by_decade = top10_movies_by_decade.explode("Genres")
+    genre_frequencies = genres_by_decade.groupby(["Decade", "Genres"]).size().reset_index(name="Frequency")
+
+    # we keep only the top 5 genres by frequency for each decade
+    top_5_genres_by_decade = genre_frequencies.groupby("Decade").apply(lambda x: x.nlargest(5, "Frequency")).reset_index(drop=True)
+    
+    # We pivot the table to have the genres as columns and the decades as rows
+    genre_trends = top_5_genres_by_decade.pivot(index="Decade", columns="Genres", values="Frequency").fillna(0)
+    return genre_trends
+
+def plot_genre_trends(genre_trends):
+    """Plots a heatmap of the top 5 genres by decade."""
+    plt.figure(figsize=(12, 8))
+    # Plot each genre trend line
+    for genre in genre_trends.columns:
+        plt.plot(genre_trends.index, genre_trends[genre], label=genre)
+
+    plt.xlabel("Decade")
+    plt.ylabel("Frequency")
+    plt.title("Top 5 Genres of Most Successful Movies by Decade")
+    plt.legend(title="Genres", loc="upper left", bbox_to_anchor=(1, 1))
+    plt.xticks(genre_trends.index, [f"{int(dec)}s" for dec in genre_trends.index], rotation=45)
+    plt.tight_layout()
+    plt.show()
