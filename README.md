@@ -44,7 +44,9 @@ The IMDb data helps us answer our research questions and IMDb ratings and votes 
 ## Organisation
 
 Character tropes: Laetitia & Nhat Anh
+
 Succesful movie:
+
 Character archetypes & movie's success:
 
 Website layout: Laetitia & Nhat Anh
