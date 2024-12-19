@@ -12,8 +12,8 @@ This project aims to define movie character archetypes based on the CMU Movie da
 1. How can we define the different character tropes ? Are there differences between genders?
 2. What has been the evolution of these character tropes over the years ?
 3. What is considered a "successful" movie ?
-4. What character archetypes make a movie successful ? Does the character's actor/actress influence the movie's success ?
-5. Do character archetypes affect the movie's success differently depending on the genre ?
+4. Does the character's actor/actress influence the movie's success ? Do archetypes affect the movie's success differently depending on the genre ?
+5. What characters make a movie successful ?
 
 ## Methods
 We used NLP techniques to analyse the character tropes, in order to define the character archetype between female and male. In the futur, NLP will be used to process the plot summaries in order to extract the key features and cluster similar plots into groups.
@@ -47,34 +47,25 @@ The IMDb data helps us answer our research questions and IMDb ratings and votes 
 
 Data cleaning and preprocessing : 
 
-How can we define the different character tropes ?
-- Visualisation of the character tropes  : Nhat Anh
-- Analysis of the character tropes based on gender : Laetitia
+How can we define the different character tropes ? Are there differences between genders? : Laetitia & Nhat Anh
 
-What has been the evolution of character tropes over the years ? : Nhat Anh
+What has been the evolution of these character tropes over the years ? : Nhat Anh
 
 What is considered a "successful" movie ? : 
 
-Do the character's actor influence the movie's success ? : 
+Does the character's actor/actress influence the movie's success ? Do character archetypes affect the movie's success differently depending on the genre ? : 
 
-Do character archetypes affect the movie's success differently depending on the genre ? :
-
-What character archetypes make a movie successful ?
-- Statistics by archetypes : 
-- Average revenue by archetypes : 
-- Frequency of archetypes appearances : 
-- Revenue by archetype : 
-- Archetype in top and bottom revenue tiers : 
+What characters make a movie successful ? : 
 
 ### Data story
 
 Website layout and Homepage : Laetitia & Nhat Anh
 
-Introduction: Nhat Anh
+Introduction : Nhat Anh
 
 Dataset : Laetitia
 
-Character tropes: Laetitia & Nhat Anh
+Character tropes : Laetitia & Nhat Anh
 
 Movie's success : 
 
