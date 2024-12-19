@@ -26,7 +26,7 @@ Preprocessing normalizes movie information and character information so that tre
 First of all, for a better understanding of the data, it needs to be visualized. We used mostly histograms to show the distribution of character tropes overall and depending on the film genre as well as to know which genres are the most common to simplify the analysis. We also plotted the distribution of the actor gender to have a better idea on how to analyze the tropes when separating based on gender.  
 
 ### Word Embeddings
-The `tv tropes` dataset is not large enough for us to do a proper significant analysis with it. To enlarge the dataset, the idea (that would be implemented in Milestone 3) is to use an embedding model (for example Word2Vec or BERT) to encode the plot summaries and the character tropes and compute the cosine similarity between the two. We would choose a similarity threshold and take the most similar embeddings to find tropes in the movie summaries and enlarge the trope counts. 
+The `tv tropes` dataset is not large enough for us to do a proper significant analysis with it. To enlarge the dataset, the idea is to use an embedding model to encode the plot summaries and the character tropes and compute the cosine similarity between the two. We would choose a similarity threshold and take the most similar embeddings to find tropes in the movie summaries and enlarge the trope counts. However, after doing this, we realized that the cosine similarities were too low to be able to use the results. We had a mean of around 0.3 and when we took only the ones above 0.5, there were only around 50 data points we could add and by looking at them, some were not even correct. We decided to not use this method to not corrupt the dataset and to only use the `tv tropes` dataset that is small but we know is of high quality.
 
 ### Successful movies
 To define a "successful" movie, we analyzed both IMDb ratings and box office revenue. First, we identified the top 5% of movies based on box office revenue, filtering out films released before 1960 to ensure relevance to contemporary trends. We then explored whether high revenue correlated with high ratings by calculating their correlation and visualizing this relationship with scatter plots, including log transformations and heatmaps. Distribution histograms for both metrics revealed that while ratings were normally distributed, revenue was heavily oriented, with only a few blockbusters achieving exceptionally high earnings. Additionally, we examined genres and actor involvement, observing the highest earning genres and identifying top actors by their frequency in the most successful films and their associated revenue averages. This approach helped us understand the factors contributing to both financial and critical success in cinema.
@@ -41,14 +41,41 @@ title.basics.tsv.gz which gives basic info like genre and release year, which le
 
 The IMDb data helps us answer our research questions and IMDb ratings and votes allow us to define and measure success as we can look at which movies and characters types, genders, and ages are linked to higher ratings and popularity.
 
-## Organisation
+## Contributions
+
+### Analysis
+
+Data cleaning and preprocessing : 
+
+How can we define the different character tropes ?
+- Visualisation of the character tropes  : Nhat Anh
+- Analysis of the character tropes based on gender : Laetitia
+
+What has been the evolution of character tropes over the years ? : Nhat Anh
+
+What is considered a "successful" movie ? : 
+
+Do the character's actor influence the movie's success ? : 
+
+Do character archetypes affect the movie's success differently depending on the genre ? :
+
+What character archetypes make a movie successful ?
+- Statistics by archetypes : 
+- Average revenue by archetypes : 
+- Frequency of archetypes appearances : 
+- Revenue by archetype : 
+- Archetype in top and bottom revenue tiers : 
+
+### Data story
+
+Website layout and Homepage : Laetitia & Nhat Anh
+
+Introduction: Nhat Anh
+
+Dataset : Laetitia
 
 Character tropes: Laetitia & Nhat Anh
 
-Succesful movie:
+Movie's success : 
 
-Character archetypes & movie's success:
-
-Website layout: Laetitia & Nhat Anh
-
-All members of the group have created visualisations corresponding to their part of the website.
+Conclusion : 
