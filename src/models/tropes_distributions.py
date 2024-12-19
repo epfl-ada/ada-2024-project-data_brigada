@@ -149,9 +149,9 @@ def tropes_by_genre(tv_tropes, movie_metadata):
     tropes_by_genre_exploded = tropes_by_genre.explode('Movie genres')
 
     # Only keep the top 10 genres
-    genres_of_interest = ['Drama', 'Comedy', 'Romance Film', 'Black-and-white', 
-                        'Action', 'Thriller', 'Short Film', 'World cinema', 
-                        'Crime Fiction', 'Indie']
+    genres_of_interest = ['Drama', 'Comedy', 'Romance Film', 
+                        'Action', 'Thriller', 'World cinema', 
+                        'Crime Fiction', 'Horror', 'Indie', 'Documentary']
 
     # Filter the DataFrame to include only the specified genres
     filtered_tropes_by_genre = tropes_by_genre_exploded[tropes_by_genre_exploded['Movie genres'].isin(genres_of_interest)]
