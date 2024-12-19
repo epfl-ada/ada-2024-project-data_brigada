@@ -9,7 +9,7 @@ Then unzip the file and place it in the folder named "data".
 This project aims to define movie character archetypes based on the CMU Movie dataset. It explores the evolution of these tropes in cinema over the years, with the goal to uncover which characteristics influence a movie's success and if those traits depend on the film's genre. By analyzing trends over decades with a broad dataset of films, we want to study shifts in character representation, and investigate whether the presence, diversity, and development of certain character archetypes directly correlate with critical acclaim and box office performance. How much do characters affect our enjoyment of a film ? Are certain characters necessary for a film to do well ? These are the questions that sparked our curiosity and motivated us to dive into this project. Through data-driven insights, we want to reveal the role characters play in shaping the cinematic experience and contributing to a movie’s popularity and how this changes depending on the time period. 
 
 ## Research questions
-1. How can we define the different character tropes ? What is considered a "hero" or "villain" profile ?
+1. How can we define the different character tropes ? Are there differences between genders?
 2. What has been the evolution of these character tropes over the years ?
 3. What is considered a "successful" movie ?
 4. What character archetypes make a movie successful ? Does the character's actor/actress influence the movie's success ?
@@ -41,14 +41,12 @@ title.basics.tsv.gz which gives basic info like genre and release year, which le
 
 The IMDb data helps us answer our research questions and IMDb ratings and votes allow us to define and measure success as we can look at which movies and characters types, genders, and ages are linked to higher ratings and popularity.
 
-## Timeline and organisation
+## Organisation
 
-In the next steps, we will answer the questions: What is considered a “hero” profile and a “villain” profile ? What character archetypes make a movie successful ? 
+Character tropes: Laetitia & Nhat Anh
+Succesful movie:
+Character archetypes & movie's success:
 
-Week 1: Answer all research questions
-Week 2: Homework 2
-Week 3: Create the datastory based on our research
-Week 4: Design the webpage and do the vizualisation
-Week 5: Clean the respository, report
+Website layout: Laetitia & Nhat Anh
 
-Every team member will continue to work on his part (subquestion) in order to answer the problematic.
+All members of the group have created visualisations corresponding to their part of the website.
