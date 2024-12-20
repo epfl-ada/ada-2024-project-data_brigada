@@ -48,7 +48,7 @@ The IMDb data helps us answer our research questions and IMDb ratings and votes 
 
 Data cleaning and preprocessing : Jules
 
-Early Graphs/Analysis : Jules
+Preliminary Graphs/Analysis : Jules
 
 How can we define the different character tropes ? Are there differences between genders? : Laetitia & Nhat Anh
 
@@ -70,6 +70,6 @@ Dataset : Laetitia
 
 Character tropes : Laetitia & Nhat Anh
 
-Movie's success : 
+Movie's success : (Interactive Graph) Jules / 
 
 Conclusion : 
