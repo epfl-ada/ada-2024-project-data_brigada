@@ -1,6 +1,10 @@
 First download the data from the following links: http://www.cs.cmu.edu/~ark/personas/
 https://datasets.imdbws.com/
 Then unzip the file and place it in the folder named "data". 
+
+Data story: https://laetitia-wilhelm.github.io/ada-data_brigada-website/
+
+
 ### This prevents uploading the data to github
 
 # Evolution of character archetypes : How can our favorite characters drive a movie’s success over the years ?
