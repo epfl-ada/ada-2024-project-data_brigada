@@ -76,4 +76,4 @@ Character tropes : Laetitia & Nhat Anh
 
 Movie's success : (Interactive Graph) Jules / Arun & Arian
 
-Conclusion : 
+Conclusion : Nhat Anh & Jules
