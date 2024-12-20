@@ -46,7 +46,7 @@ The IMDb data helps us answer our research questions and IMDb ratings and votes 
 
 ### Analysis
 
-Data cleaning and preprocessing : Jules
+Data cleaning and preprocessing : Jules & Arun
 
 Preliminary Graphs/Analysis : Jules
 
@@ -54,11 +54,11 @@ How can we define the different character tropes ? Are there differences between
 
 What has been the evolution of these character tropes over the years ? : Nhat Anh
 
-What is considered a "successful" movie ? : 
+What is considered a "successful" movie ? : Arun
 
-Does the character's actor/actress influence the movie's success ? Do character archetypes affect the movie's success differently depending on the genre ? : 
+Does the character's actor/actress influence the movie's success ? Do character archetypes affect the movie's success differently depending on the genre ? : Arian
 
-What characters make a movie successful ? : 
+What characters make a movie successful ? : Arian
 
 ### Data story
 
@@ -66,10 +66,10 @@ Website layout and Homepage : Laetitia & Nhat Anh
 
 Introduction : Nhat Anh
 
-Dataset : Laetitia
+Dataset : Laetitia & Arun
 
 Character tropes : Laetitia & Nhat Anh
 
-Movie's success : (Interactive Graph) Jules / 
+Movie's success : (Interactive Graph) Jules / Arun & Arian
 
 Conclusion : 
